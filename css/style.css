@@ -1,24 +1,3 @@
-/* --------------------------------- */
-/* Css Styles                        */
-/*---------------------------------- */
-
-/**
-	Gorge - Portfolio Template 
-	Author : Tavonline
-	Copyright 2018
-
-/* Table of Content
-==================================================
-	
-	1. Body and Core Css
-	2. Home Page
-     2.1 Portfolio Section
-     2.2 Twitter Section
-
-
-
-/*------------------------ 1 Body and Core Css ------------------------*/
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 h2,h3,h4,h5,h6{
     color: white;
