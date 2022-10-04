@@ -70,7 +70,15 @@
                     <p class="bottom_30">For 6 weeks I had the pleasure of working as a technical consultant at VanRoey. Here I had towork on an internal project. I learned how to work with the Microsoft Dynamics 365 platform and Power tools like Power Apps. </p>
                     
                     <h4>Assignment</h4>
-                    <p>I was tasked with creating an app that would allow the functional consultants to get an overview of the versions of all installed apps from each tenant's Business Central environment. </p>
+                    <p class="bottom_30">I was tasked with creating an app that would allow the functional consultants to get an overview of the versions of all installed apps from each tenant's Business Central environment. </p>
+                    
+                    <h4>Work process</h4>
+                    <p>Currently the functional went to each customer's admin center to retrieve this information, but this was anything but efficient. so it was time for something better.</p>
+                    <p>First I had to research what already existed to obtain and map this data. Soon I discovered that not much existed. There were no Microsoft APIs that could give me the data all at once, so I had to find something else.</p>
+                    <p class="bottom_30">Eventually I decided to write a script that addressed different API endpoints of each tenant's Business Central environment, and combine the useful data I got back from them into a json file, which I then retrieved via a power app.</p>
+                    
+                    <h4>Endresult</h4>
+                    <p class="bottom_30">Now VanRoey can get an overview of each customer's installed Business Central apps through a Power App. They can easily filter and search this data through this app and even go to the admin center for updating.</p>
 
                     <h4>Used technologies</h4>
                     <ul class="offset-5 text-left bottom_30" style="color: #e0e0e0; ">
@@ -96,24 +104,24 @@
     </div> <!-- wrapper end -->
 
     <footer>
-       <div class="cont">
-            <div class="row">
-                <div class="col-md-4 d-sm-none d-md-block">
-                    <div class="social">
-                        <a href="https://www.linkedin.com/in/nicky-embrechts-5a406b222/"><i class="fab fa-linkedin"></i>  </a>
-                        <a href="https://twitter.com/NickyEmbrechts"><i class="fab fa-twitter" aria-hidden="true"></i>  </a>
-                        <a href="https://github.com/nercules"><i class="fab fa-github"></i>  </a>
-                    </div>
-                </div>
-                <div class="col-md-8 col-sm-12 col-xs-12 d-none d-sm-block getintouch">
-                    <a href="https://thetav.online/html/gorge/dark/index.html#">
-                        <strong>Get In Touch</strong><br>
-                        <p><a  href="mailto:nickyembrechts@icloud.com">nickyembrechts@icloud.com</a></p>
-                    </a>
-                </div>
-            </div>
-       </div>
-    </footer>
+        <div class="cont">
+             <div class="row">
+                 <div class="col-md-4 d-sm-none d-md-block">
+                     <div class="social">
+                         <a href="https://www.linkedin.com/in/nicky-embrechts-5a406b222/"><i class="fab fa-linkedin"></i>  </a>
+                         <a href="https://github.com/nercules"><i class="fab fa-github"></i>  </a>
+                         <a href="mailto:r0831811@student.thomasmore.be"><i class="fa-solid fa-envelope"></i>  </a>
+                     </div>
+                 </div>
+                 <div class="col-md-8 col-sm-12 col-xs-12 d-none d-sm-block getintouch">
+                     <a href="mailto:r0831811@student.thomasmore.be">
+                         <strong>Get In Touch</strong><br>
+                         <p><a href="mailto:r0831811@student.thomasmore.be">r0831811@student.thomasmore.be</a></p>
+                     </a>
+                 </div>
+             </div>
+        </div>
+     </footer>
     
     <!-- Javascripts -->
     <script src="../js/jquery-2.1.4.min.js.download"></script>
