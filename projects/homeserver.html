@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>Nicky's Portfolio</title>
+
+    <meta name="description" content="Gorge Portfolio Template" />
+    <meta name="keywords" content="personal, portfolio" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/cubeportfolio.min.css" />
+    <link rel="stylesheet" href="../css/red.css" id="color" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/dark.css" />
+
+    <!-- Font icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!-- PRELOADER -->
+    <div class="preloader" style="display: none">
+      <div class="loader" style="display: none">
+        <div class="loader-inner"></div>
+      </div>
+    </div>
+
+    <!-- HEADER -->
+    <header>
+      <img src="images/logo.png" alt="" />
+      <div class="nav-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </header>
+
+    <!-- FULL MENU -->
+    <div class="full-menu">
+      <div class="full-inner row">
+        <nav class="col-md-8">
+          <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About me</a></li>
+          </ul>
+        </nav>
+        <div class="col-md-4 full-contact">
+          <ul>
+            <li class="title">Get in Touch</li>
+            <li>r0831811@student.thomasmore.be</li>
+            <li>
+              <div class="social">
+                <a href="https://www.linkedin.com/in/nicky-embrechts-5a406b222/"
+                  ><i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/nercules"
+                  ><i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:r0831811@student.thomasmore.be"
+                  ><i class="fa-solid fa-envelope"></i>
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- SITE CONTENT -->
+    <div class="wrapper">
+      <div class="cont">
+        <section class="portfolio-single type-3 row">
+          <div class="col-md-10 offset-md-1">
+            <h1 class="title bottom_30 top_120 text-center">Homeserver</h1>
+            <h4>Introduction</h4>
+            <p>
+              Since I love tinkering around with hardware, I decided that
+              setting up a homelab server would be a great idea. With this
+              server, I could easily store vacation pictures on a file server,
+              spin up VMs on demand, set up an ad blocker on my network, and
+              maybe even create a cloud gaming server. In addition, I needed to
+              ensure that all of this was accessible remotely. After researching
+              and gathering the necessary hardware, I decided to use Proxmox, a
+              virtualization software, as the backbone of my homelab server.
+            </p>
+
+            <h4 class="top_45">Proxmox Virtualization</h4>
+            <p>
+              To achieve my goals, I chose to use Proxmox, a powerful
+              virtualization software that allowed me to create and manage
+              multiple virtual machines on my server. Proxmox supports various
+              virtualization technologies, including KVM and LXC, making it
+              highly versatile and easy to use. With Proxmox, I was able to
+              create separate VMs for each of my needs, ensuring that they would
+              not interfere with one another.
+            </p>
+
+            <h4 class="top_45">Storage and Hardware</h4>
+            <p>
+              To support my virtualization needs, I chose a second-hand desktop
+              with an i7 7700 processor and 16GB of DDR4 memory. The desktop
+              came with a 64GB SSD for the OS and a 512GB SSD for VM storage. I
+              also added 2x1TB and 2x2TB HDDs in RAID 1 for file storage. This
+              hardware configuration allowed me to run multiple VMs
+              simultaneously without any performance issues.
+            </p>
+            <div class="col-md-12 portfolio-images">
+              <figure class="bottom_30">
+                <img src="../images/hardware.png" alt="" />
+              </figure>
+            </div>
+
+            <h4 class="top_45">Fileserver</h4>
+            <p>
+              One of the main reasons I set up a homelab server was to create a
+              fileserver for storing files ranging from vacation pictures to old
+              schoolwork and personal projects. This allowed me to keep recent
+              working data on my laptop without running out of space because of
+              older projects.
+            </p>
+            <p>
+              To manage this data, I chose the TurnKey fileserver system. The
+              main reason for this choice was the limited resources it uses, but
+              if it needs more computing power, it has access to the OS
+              resources. Whenever I upload or download a large dataset,
+              everything scales on demand. This setup allowed me to access and
+              manage my files easily, with the added benefit of not relying on
+              third-party cloud services.
+            </p>
+            <div class="col-md-12 portfolio-images">
+              <figure class="bottom_30">
+                <img src="../images/turnkey.png" alt="" />
+              </figure>
+            </div>
+
+            <h4 class="top_45">Add Blocker</h4>
+            <p>
+              I also wanted to set up an ad blocker on my network, and I chose
+              Pi-Hole for this task. Pi-Hole is a well-known and easy-to-use ad
+              blocker that doesn't utilize a lot of computing power. It runs in
+              a container and is available on my network at home. To use the
+              blocker, the user has to manually set a DNS server on their device
+              when connected to my network. This way, the user still has the
+              choice to not use the ad blocker if it happens to block content
+              they want to access.
+            </p>
+
+            <h4 class="top_45">Remote Access</h4>
+            <p>
+              I use Tailscale to remotely access my network and everything on
+              it. Tailscale is a VPN service that makes it easy to securely
+              connect to my network from anywhere, as long as I have an internet
+              connection. With Tailscale, I can manage everything on my network
+              from anywhere in the world.
+            </p>
+            <p>
+              One of the things I've done with Tailscale is set up an exit node
+              on my homeserver. This means that when I'm on a public WiFi
+              network, all of my traffic gets encrypted and redirected to my
+              homeserver. From there, I access the internet via the exit node,
+              which makes it much more secure.
+            </p>
+            <p>
+              I also use Tailscale to access a self-made KVM (a Raspberry Pi
+              with jump wires and a camera) that I've set up on my homeserver.
+              This allows me to troubleshoot the homeserver remotely if needed.
+              There's a camera pointing at the server, and it live streams
+              footage to a webpage where I can check the physical state of the
+              server. There are also jump wires running from the Raspberry Pi to
+              some leds, which can change the value of a photoresistor, that is
+              connected to the motherboard of the homeserver, so I can reboot
+              and reset the server remotely if necessary (that way I don't mix
+              up different electrical circuits).
+            </p>
+            <div class="col-md-12 portfolio-images">
+              <figure class="bottom_30">
+                <img src="../images/homeserver-camera.png" alt="" />
+              </figure>
+            </div>
+
+            <h4 class="top_45">Keep Everything Organized</h4>
+            <p>
+              With so many different software packages running on my server, it
+              can be difficult to keep track of everything. To help me stay
+              organized, I use Heimdall, a simple web application that redirects
+              me to the web interfaces of each software.
+            </p>
+            <p>
+              This allows me to easily access all of my different tools and
+              services from one central location. Heimdall provides a clean,
+              organized dashboard that makes it easy to navigate between
+              different applications and services.
+            </p>
+            <p>
+              By using Heimdall to keep everything organized, I'm able to spend
+              less time hunting for the software I need and more time actually
+              using it.
+            </p>
+            <div class="col-md-12 portfolio-images">
+              <figure class="bottom_30">
+                <img src="../images/heimdall.png" alt="" />
+              </figure>
+            </div>
+
+            <h4 class="top_45">Dorm Surveillance</h4>
+            <p>
+              To ensure the safety of my dorm room while I'm away, I have set up
+              a surveillance system using a Raspberry Pi, a Picamera, and
+              various software tools. I am currently on an internship in Israel
+              and, although I can lock my dorm room, I still wanted an extra
+              layer of protection.
+            </p>
+            <p>
+              To achieve this, I have installed Raspberry Pi OS, MotionEye, and
+              ZoneMinder. The Raspberry Pi captures the video stream and
+              broadcasts it over Tailscale, which is a secure network connection
+              that I can access remotely. The video stream is then captured by
+              ZoneMinder, which is a video surveillance system that records
+              footage only when motion is detected.
+            </p>
+            <p>
+              This setup allows me to keep an eye on my dorm room at all times
+              and provides me with peace of mind knowing that I have an extra
+              layer of protection.
+            </p>
+            <div class="col-md-12 portfolio-images">
+              <figure class="bottom_30">
+                <img src="../images/picam.jpg" alt="" />
+              </figure>
+            </div>
+
+            <h4 class="top_45">Next Up</h4>
+            <p>
+              While I'm very happy with my current setup, there are a few things
+              I'd like to add or upgrade in the future.
+            </p>
+            <p>
+              One thing I'd like to do is install an AMD RX580 8GB graphics card
+              in the server. This would allow me to potentially set up a cloud
+              gaming system, as well as do some accelerated encoding or GPU
+              programming.
+            </p>
+            <p>
+              I'm also looking to purchase a proper KVM. While my current
+              Raspberry Pi solution works, there are certainly better options
+              out there that would provide better performance and reliability.
+            </p>
+            <p>
+              Additionally, I'm considering some hardware upgrades, such as
+              adding more RAM or upgrading to a newer CPU. With my current
+              setup, I'm limited to four physical cores and can't install
+              Windows 11, so an upgrade might be necessary in the near future.
+            </p>
+
+            <h4>Used technologies</h4>
+            <ul class="bottom_30" style="color: #e0e0e0">
+              <li>Virtualization</li>
+              <li>Raspberry Pi</li>
+              <li>Electronics</li>
+              <li>Consumer hardware</li>
+            </ul>
+
+            <ul class="information">
+              <li><span>Category:</span> Application Development</li>
+            </ul>
+          </div>
+        </section>
+      </div>
+      <!-- cont end -->
+    </div>
+    <!-- wrapper end -->
+
+    <footer>
+      <div class="cont">
+        <div class="row">
+          <div class="col-md-4 d-sm-none d-md-block">
+            <div class="social">
+              <a href="https://www.linkedin.com/in/nicky-embrechts-5a406b222/"
+                ><i class="fab fa-linkedin"></i>
+              </a>
+              <a href="https://github.com/nercules"
+                ><i class="fab fa-github"></i>
+              </a>
+              <a href="mailto:r0831811@student.thomasmore.be"
+                ><i class="fa-solid fa-envelope"></i>
+              </a>
+            </div>
+          </div>
+          <div
+            class="col-md-8 col-sm-12 col-xs-12 d-none d-sm-block getintouch"
+          >
+            <a href="mailto:r0831811@student.thomasmore.be">
+              <strong>Get In Touch</strong><br />
+              <p>
+                <a href="mailto:r0831811@student.thomasmore.be"
+                  >r0831811@student.thomasmore.be</a
+                >
+              </p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Javascripts -->
+    <script src="../js/jquery-2.1.4.min.js.download"></script>
+    <script src="../js/jquery.cubeportfolio.min.js.download"></script>
+    <script src="../js/typed.js.download"></script>
+    <script src="../js/particles.js.download "></script>
+    <script src="../js/app.js.download"></script>
+    <script src="../js/jquery.hover3d.js.download"></script>
+    <script src="../js/main.js.download"></script>
+  </body>
+</html>
