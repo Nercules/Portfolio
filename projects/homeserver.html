@@ -56,7 +56,7 @@
         <div class="col-md-4 full-contact">
           <ul>
             <li class="title">Get in Touch</li>
-            <li>nicky.embrechts@student.thomasmore.be</li>
+            <li>nickyembrechts0@gmail.com</li>
             <li>
               <div class="social">
                 <a href="https://www.linkedin.com/in/nicky-embrechts-5a406b222/"
@@ -65,7 +65,7 @@
                 <a href="https://github.com/nercules"
                   ><i class="fab fa-github"></i>
                 </a>
-                <a href="mailto:nicky.embrechts@student.thomasmore.be"
+                <a href="mailto:nickyembrechts0@gmail.com"
                   ><i class="fa-solid fa-envelope"></i>
                 </a>
               </div>
@@ -81,37 +81,44 @@
         <section class="portfolio-single type-3 row">
           <div class="col-md-10 offset-md-1">
             <h1 class="title bottom_30 top_120 text-center">Homeserver</h1>
-            <h4>Introduction</h4>
+            <h4>
+              Setting Up a Homelab Server: Exploring Hardware and Software
+              Configurations
+            </h4>
             <p>
-              Since I love tinkering around with hardware, I decided that
-              setting up a homelab server would be a great idea. With this
-              server, I could easily store vacation pictures on a file server,
-              spin up VMs on demand, set up an ad blocker on my network, and
-              maybe even create a cloud gaming server. In addition, I needed to
-              ensure that all of this was accessible remotely. After researching
-              and gathering the necessary hardware, I decided to use Proxmox, a
-              virtualization software, as the backbone of my homelab server.
+              Welcome to my webpage, where I share my journey of setting up a
+              homelab server to explore various hardware and software
+              configurations. Being passionate about tinkering with hardware, I
+              realized that a homelab server would provide me with the perfect
+              platform to store files, run virtual machines, set up an ad
+              blocker, and even create a cloud gaming server. Additionally, it
+              was crucial for me to ensure remote accessibility. Through
+              extensive research and careful consideration, I chose Proxmox as
+              the virtualization software to serve as the backbone of my homelab
+              server.
             </p>
 
             <h4 class="top_45">Proxmox Virtualization</h4>
             <p>
-              To achieve my goals, I chose to use Proxmox, a powerful
-              virtualization software that allowed me to create and manage
-              multiple virtual machines on my server. Proxmox supports various
-              virtualization technologies, including KVM and LXC, making it
-              highly versatile and easy to use. With Proxmox, I was able to
-              create separate VMs for each of my needs, ensuring that they would
-              not interfere with one another.
+              To achieve my goals, I opted for Proxmox, a powerful
+              virtualization software that enabled me to create and manage
+              multiple virtual machines on my server. With support for various
+              virtualization technologies like KVM and LXC, Proxmox proved to be
+              highly versatile and user-friendly. Utilizing Proxmox, I could
+              create separate virtual machines for different purposes, ensuring
+              their seamless coexistence without interference.
             </p>
 
             <h4 class="top_45">Storage and Hardware</h4>
             <p>
-              To support my virtualization needs, I chose a second-hand desktop
-              with an i7 7700 processor and 16GB of DDR4 memory. The desktop
-              came with a 64GB SSD for the OS and a 512GB SSD for VM storage. I
-              also added 2x1TB and 2x2TB HDDs in RAID 1 for file storage. This
-              hardware configuration allowed me to run multiple VMs
-              simultaneously without any performance issues.
+              To meet the demands of virtualization, I carefully selected a
+              second-hand desktop equipped with an i7 7700 processor and 16GB of
+              DDR4 memory. This configuration, coupled with a 64GB SSD for the
+              operating system and a 512GB SSD for VM storage, allowed me to run
+              multiple virtual machines simultaneously without compromising
+              performance. For file storage, I incorporated 2x1TB and 2x2TB HDDs
+              in RAID 1 configuration, ensuring reliable and scalable storage
+              capacity..
             </p>
             <div class="col-md-12 portfolio-images">
               <figure class="bottom_30">
@@ -121,20 +128,14 @@
 
             <h4 class="top_45">Fileserver</h4>
             <p>
-              One of the main reasons I set up a homelab server was to create a
-              fileserver for storing files ranging from vacation pictures to old
-              schoolwork and personal projects. This allowed me to keep recent
-              working data on my laptop without running out of space because of
-              older projects.
-            </p>
-            <p>
-              To manage this data, I chose the TurnKey fileserver system. The
-              main reason for this choice was the limited resources it uses, but
-              if it needs more computing power, it has access to the OS
-              resources. Whenever I upload or download a large dataset,
-              everything scales on demand. This setup allowed me to access and
-              manage my files easily, with the added benefit of not relying on
-              third-party cloud services.
+              A significant motivation behind setting up a homelab server was to
+              establish a fileserver that could accommodate a wide range of
+              files, from vacation pictures to personal projects and old
+              schoolwork. To manage this data effectively, I implemented the
+              TurnKey fileserver system. This choice was driven by its efficient
+              resource utilization, which could dynamically scale based on
+              demand. By relying on the fileserver system, I could easily access
+              and manage my files without relying on third-party cloud services.
             </p>
             <div class="col-md-12 portfolio-images">
               <figure class="bottom_30">
@@ -144,42 +145,26 @@
 
             <h4 class="top_45">Add Blocker</h4>
             <p>
-              I also wanted to set up an ad blocker on my network, and I chose
-              Pi-Hole for this task. Pi-Hole is a well-known and easy-to-use ad
-              blocker that doesn't utilize a lot of computing power. It runs in
-              a container and is available on my network at home. To use the
-              blocker, the user has to manually set a DNS server on their device
-              when connected to my network. This way, the user still has the
-              choice to not use the ad blocker if it happens to block content
-              they want to access.
+              To bolster network security, I decided to incorporate an ad
+              blocker into my homelab server setup. Pi-Hole, a well-known and
+              user-friendly ad blocker, emerged as the ideal choice. Operating
+              within a container, Pi-Hole efficiently blocked advertisements
+              while minimizing resource consumption. By setting up a DNS server
+              on connected devices, users could choose to leverage the ad
+              blocker and enjoy an enhanced browsing experience.
             </p>
 
             <h4 class="top_45">Remote Access</h4>
             <p>
-              I use Tailscale to remotely access my network and everything on
-              it. Tailscale is a VPN service that makes it easy to securely
-              connect to my network from anywhere, as long as I have an internet
-              connection. With Tailscale, I can manage everything on my network
-              from anywhere in the world.
-            </p>
-            <p>
-              One of the things I've done with Tailscale is set up an exit node
-              on my homeserver. This means that when I'm on a public WiFi
-              network, all of my traffic gets encrypted and redirected to my
-              homeserver. From there, I access the internet via the exit node,
-              which makes it much more secure.
-            </p>
-            <p>
-              I also use Tailscale to access a self-made KVM (a Raspberry Pi
-              with jump wires and a camera) that I've set up on my homeserver.
-              This allows me to troubleshoot the homeserver remotely if needed.
-              There's a camera pointing at the server, and it live streams
-              footage to a webpage where I can check the physical state of the
-              server. There are also jump wires running from the Raspberry Pi to
-              some leds, which can change the value of a photoresistor, that is
-              connected to the motherboard of the homeserver, so I can reboot
-              and reset the server remotely if necessary (that way I don't mix
-              up different electrical circuits).
+              To ensure seamless remote access to my network and its resources,
+              I employed Tailscale, a reliable VPN service. Tailscale
+              facilitated secure connections to my network from anywhere,
+              granting me comprehensive control and management capabilities. By
+              utilizing Tailscale, I not only achieved remote network
+              administration but also established an exit node on my homeserver.
+              This encrypted and redirected all my traffic, adding an extra
+              layer of security, especially when connected to public WiFi
+              networks.
             </p>
             <div class="col-md-12 portfolio-images">
               <figure class="bottom_30">
@@ -189,21 +174,14 @@
 
             <h4 class="top_45">Keep Everything Organized</h4>
             <p>
-              With so many different software packages running on my server, it
-              can be difficult to keep track of everything. To help me stay
-              organized, I use Heimdall, a simple web application that redirects
-              me to the web interfaces of each software.
-            </p>
-            <p>
-              This allows me to easily access all of my different tools and
-              services from one central location. Heimdall provides a clean,
-              organized dashboard that makes it easy to navigate between
-              different applications and services.
-            </p>
-            <p>
-              By using Heimdall to keep everything organized, I'm able to spend
-              less time hunting for the software I need and more time actually
-              using it.
+              With multiple software packages running on my server, it became
+              essential to maintain organization and easy access. To streamline
+              these efforts, I implemented Heimdall, a user-friendly web
+              application that served as a central dashboard for accessing
+              various software interfaces. Heimdall provided an organized and
+              visually pleasing layout, simplifying navigation and enabling
+              efficient utilization of the diverse tools and services on my
+              server.
             </p>
             <div class="col-md-12 portfolio-images">
               <figure class="bottom_30">
@@ -213,24 +191,10 @@
 
             <h4 class="top_45">Dorm Surveillance</h4>
             <p>
-              To ensure the safety of my dorm room while I'm away, I have set up
-              a surveillance system using a Raspberry Pi, a Picamera, and
-              various software tools. I am currently on an internship in Israel
-              and, although I can lock my dorm room, I still wanted an extra
-              layer of protection.
-            </p>
-            <p>
-              To achieve this, I have installed Raspberry Pi OS, MotionEye, and
-              ZoneMinder. The Raspberry Pi captures the video stream and
-              broadcasts it over Tailscale, which is a secure network connection
-              that I can access remotely. The video stream is then captured by
-              ZoneMinder, which is a video surveillance system that records
-              footage only when motion is detected.
-            </p>
-            <p>
-              This setup allows me to keep an eye on my dorm room at all times
-              and provides me with peace of mind knowing that I have an extra
-              layer of protection.
+              To ensure the security of my dorm room while I'm away, I devised a
+              surveillance system using a Raspberry Pi, a Picamera, and
+              specialized software tools. This system comprised Raspberry Pi OS,
+              MotionEye, and ZoneMinder. The Raspberry Pi
             </p>
             <div class="col-md-12 portfolio-images">
               <figure class="bottom_30">
@@ -240,25 +204,15 @@
 
             <h4 class="top_45">Next Up</h4>
             <p>
-              While I'm very happy with my current setup, there are a few things
-              I'd like to add or upgrade in the future.
-            </p>
-            <p>
-              One thing I'd like to do is install an AMD RX580 8GB graphics card
-              in the server. This would allow me to potentially set up a cloud
-              gaming system, as well as do some accelerated encoding or GPU
-              programming.
-            </p>
-            <p>
-              I'm also looking to purchase a proper KVM. While my current
-              Raspberry Pi solution works, there are certainly better options
-              out there that would provide better performance and reliability.
-            </p>
-            <p>
-              Additionally, I'm considering some hardware upgrades, such as
-              adding more RAM or upgrading to a newer CPU. With my current
-              setup, I'm limited to four physical cores and can't install
-              Windows 11, so an upgrade might be necessary in the near future.
+              Looking ahead, I have exciting plans to enhance my current homelab
+              server setup. Firstly, I intend to install an AMD RX580 8GB
+              graphics card, enabling me to explore possibilities like cloud
+              gaming and accelerated encoding. Additionally, I'm considering
+              investing in a proper KVM solution for improved remote management.
+              Hardware upgrades such as increasing RAM or upgrading to a newer
+              CPU are also on the horizon. These enhancements will further
+              optimize performance, expand capabilities, and keep my homelab
+              server at the forefront of technological innovation.
             </p>
 
             <h4>Used technologies</h4>
@@ -290,7 +244,7 @@
               <a href="https://github.com/nercules"
                 ><i class="fab fa-github"></i>
               </a>
-              <a href="mailto:nicky.embrechts@student.thomasmore.be"
+              <a href="mailto:nickyembrechts0@gmail.com"
                 ><i class="fa-solid fa-envelope"></i>
               </a>
             </div>
@@ -298,11 +252,11 @@
           <div
             class="col-md-8 col-sm-12 col-xs-12 d-none d-sm-block getintouch"
           >
-            <a href="mailto:nicky.embrechts@student.thomasmore.be">
+            <a href="mailto:nickyembrechts0@gmail.com">
               <strong>Get In Touch</strong><br />
               <p>
-                <a href="mailto:nicky.embrechts@student.thomasmore.be"
-                  >nicky.embrechts@student.thomasmore.be</a
+                <a href="mailto:nickyembrechts0@gmail.com"
+                  >nickyembrechts0@gmail.com</a
                 >
               </p>
             </a>
